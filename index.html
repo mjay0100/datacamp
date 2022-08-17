@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Data camp</title>
+  </head>
+  <body class="bg-[#f7f3eb] h-[100vh]">
+    <nav class="flex justify-between mx-6 my-4 items-center">
+      <h1 class="text-2xl">datacamp</h1>
+      <div class="flex items-center border border-black border-2 rounded-md">
+        <span
+          class="border-black border-r-2 p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+        </span>
+        <div
+          class="flex gap-4 items-center p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+        >
+          <span class=""><i class="fa-solid fa-bars"></i></span>
+          <h2 class="capitalize">course outline</h2>
+        </div>
+        <span
+          class="border-black border-l-2 p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+        >
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </div>
+      <div class="flex gap-3">
+        <span class="text-md"><i class="fa-solid fa-mobile-screen"></i></span>
+        <span class="text-md"><i class="fa-solid fa-note-sticky"></i></span>
+        <span class="text-md"
+          ><i class="fa-solid fa-circle-exclamation"></i
+        ></span>
+      </div>
+    </nav>
+    <section class="my-[2.5rem] mx-auto w-[700px] h-[480px]">
+      <div class="flex justify-between">
+        <h1 class="text-2xl rounded-md">Welcome to the course!</h1>
+        <p class="bg-yellow-400 p-1 rounded-md">500px</p>
+      </div>
+      <video
+        controls
+        preload="auto"
+        class="rounded-md my-6 mx-auto w-[800px] h-[400px]"
+        poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlNULV997dz9NTUieVFeUEuLANqpwIU4Evtw&usqp=CAU"
+      >
+        <source
+          src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+          type="video/webm"
+        />
+
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <div class="flex justify-between my-4">
+        <button
+          class="border-black border-2 p-2 rounded-md hover:bg-gray-300 transition-all duration-400"
+        >
+          Show Transcript
+        </button>
+        <span
+          class="bg-green-500 border-2 p-2 rounded-md hover:bg-green-400 transition-all duration-400 cursor-pointer"
+        >
+          Got it
+        </span>
+      </div>
+    </section>
+  </body>
+</html>
