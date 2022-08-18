@@ -12,67 +12,112 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      section.active {
+        display: block;
+      }
+      .main.active {
+        background-color: rgb(53, 53, 53);
+        height: 100vh;
+        /* opacity: 0.2; */
+      }
+    </style>
     <title>Data camp</title>
   </head>
   <body class="bg-[#f7f3eb] h-[100vh]">
-    <nav class="flex justify-between mx-6 my-4 items-center">
-      <h1 class="text-2xl">datacamp</h1>
-      <div class="flex items-center border border-black border-2 rounded-md">
+    <section
+      class="hidden bg-white rounded-md mx-auto p-6 z-[5] absolute top-[1rem] left-[3rem] right-[3rem] md:left-[8rem] md:right-[8rem] bottom-[1rem]"
+    >
+      <div class="flex justify-between mx-5">
+        <h1 class="text-lg font-semibold">Introduction to SQL</h1>
         <span
-          class="border-black border-r-2 p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
-        >
-          <i class="fa-solid fa-arrow-left"></i>
-        </span>
-        <div
-          class="flex gap-4 items-center p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
-        >
-          <span class=""><i class="fa-solid fa-bars"></i></span>
-          <h2 class="capitalize">course outline</h2>
-        </div>
-        <span
-          class="border-black border-l-2 p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
-        >
-          <i class="fa-solid fa-arrow-right"></i>
-        </span>
-      </div>
-      <div class="flex gap-3">
-        <span class="text-md"><i class="fa-solid fa-mobile-screen"></i></span>
-        <span class="text-md"><i class="fa-solid fa-note-sticky"></i></span>
-        <span class="text-md"
-          ><i class="fa-solid fa-circle-exclamation"></i
+          class="text-lg hover:bg-[#ccc] transition-all duration-400 cursor-pointe px-2 rounded-md py-1"
+          ><i class="fa-solid fa-xmark"></i
         ></span>
       </div>
-    </nav>
-    <section class="my-[2.5rem] mx-auto w-[700px] h-[480px]">
-      <div class="flex justify-between">
-        <h1 class="text-2xl rounded-md">Welcome to the course!</h1>
-        <p class="bg-yellow-400 p-1 rounded-md">500px</p>
-      </div>
-      <video
-        controls
-        preload="auto"
-        class="rounded-md my-6 mx-auto w-[800px] h-[400px]"
-        poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlNULV997dz9NTUieVFeUEuLANqpwIU4Evtw&usqp=CAU"
-      >
-        <source
-          src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-          type="video/webm"
-        />
-
-        Sorry, your browser doesn't support embedded videos.
-      </video>
-      <div class="flex justify-between my-4">
-        <button
-          class="border-black border-2 p-2 rounded-md hover:bg-gray-300 transition-all duration-400"
-        >
-          Show Transcript
-        </button>
-        <span
-          class="bg-green-500 border-2 p-2 rounded-md hover:bg-green-400 transition-all duration-400 cursor-pointer"
-        >
-          Got it
-        </span>
-      </div>
     </section>
+    <div class="main">
+      <nav
+        class="flex justify-evenly md:justify-between mx-6 my-1 items-center"
+      >
+        <h1 class="text-2xl">datacamp</h1>
+        <div class="flex items-center border border-black border-2 rounded-md">
+          <span
+            class="border-black border-r-2 p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </span>
+          <div
+            class="flex modal gap-4 items-center p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+          >
+            <span class=""><i class="fa-solid fa-bars"></i></span>
+            <h2 class="capitalize">course outline</h2>
+          </div>
+          <span
+            class="border-black border-l-2 p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </div>
+        <div class="hidden md:flex gap-3">
+          <span class="text-md"><i class="fa-solid fa-mobile-screen"></i></span>
+          <span class="text-md"><i class="fa-solid fa-note-sticky"></i></span>
+          <span class="text-md"
+            ><i class="fa-solid fa-circle-exclamation"></i
+          ></span>
+        </div>
+      </nav>
+      <section class="my-[2.5rem] mx-auto w-[700px] h-[480px]">
+        <div class="flex justify-between">
+          <h1 class="text-2xl rounded-md">Welcome to the course!</h1>
+          <p class="bg-yellow-400 p-1 rounded-md">500px</p>
+        </div>
+        <div>
+          <video
+            controls
+            preload="auto"
+            class="rounded-md my-6 mx-auto w-[800px] h-[400px]"
+            poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlNULV997dz9NTUieVFeUEuLANqpwIU4Evtw&usqp=CAU"
+          >
+            <source
+              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+              type="video/webm"
+            />
+
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+        </div>
+        <div class="flex justify-between my-4">
+          <button
+            class="border-black border-2 p-2 rounded-md hover:bg-gray-300 transition-all duration-400"
+          >
+            Show Transcript
+          </button>
+          <span
+            class="bg-green-500 border-2 p-2 rounded-md hover:bg-green-400 transition-all duration-400 cursor-pointer"
+          >
+            Got it
+          </span>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const modal = document.querySelector(".modal");
+      const section = document.querySelector("section");
+      const main = document.querySelector(".main");
+      const close = document.querySelector(".fa-xmark");
+      console.log(modal);
+
+      modal.addEventListener("click", () => {
+        section.classList.add("active");
+        main.classList.add("active");
+        close.classList.remove("active");
+      });
+      close.addEventListener("click", () => {
+        section.classList.remove("active");
+        main.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
