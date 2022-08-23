@@ -34,6 +34,14 @@
       .content.active {
         display: block;
       }
+      progress::-webkit-progress-bar {
+        border-radius: 5px;
+        background-color: #ccc;
+      }
+      progress::-moz-progress-bar {
+        border-radius: 5px;
+        background-color: rgb(21, 223, 31);
+      }
     </style>
     <title>Data camp</title>
   </head>
@@ -50,21 +58,21 @@
         ></span>
       </div>
       <div class="scroll my-5 shadow-sm shadow-slate-300">
-        <div class="mb-8">
+        <div class="mb-6">
           <div class="shadow-sm shadow-slate-400">
             <div class="flex justify-between items-center p-4">
               <div class="flex gap-4 mx-3 items-center">
                 <h1
-                  class="font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
+                  class="text-center font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
                 >
                   1
                 </h1>
                 <h1 class="text-2xl font-bold">Selecting Columns</h1>
                 <h1 class="text-lg bg-yellow-400 p-2 rounded-md">Free</h1>
               </div>
-              <div class="flex gap-1">
+              <div class="flex items-center gap-1">
                 <h1 class="text-lg p-2">0%</h1>
-                <input type="range" />
+                <progress value="0" max="10"></progress>
               </div>
             </div>
             <p class="p-6 font-semibold">
@@ -75,7 +83,7 @@
               database tables.
             </p>
             <div class="content hidden">
-              <div class="flex justify-between items-center p-6">
+              <div class="flex justify-between items-center px-6 py-1">
                 <div class="flex gap-3 items-center">
                   <i
                     class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
@@ -84,7 +92,7 @@
                 </div>
                 <h1 class="text-lg">50 XP</h1>
               </div>
-              <div class="flex justify-between items-center p-6">
+              <div class="flex justify-between items-center px-6 py-1">
                 <div class="flex gap-3 items-center">
                   <i
                     class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
@@ -93,7 +101,7 @@
                 </div>
                 <h1 class="text-lg">50 XP</h1>
               </div>
-              <div class="flex justify-between items-center p-6">
+              <div class="flex justify-between items-center px-6 py-1">
                 <div class="flex gap-3 items-center">
                   <i
                     class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
@@ -102,7 +110,7 @@
                 </div>
                 <h1 class="text-lg">50 XP</h1>
               </div>
-              <div class="flex justify-between items-center p-6">
+              <div class="flex justify-between items-center px-6 py-1">
                 <div class="flex gap-3 items-center">
                   <i
                     class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
@@ -111,7 +119,7 @@
                 </div>
                 <h1 class="text-lg">50 XP</h1>
               </div>
-              <div class="flex justify-between items-center p-6">
+              <div class="flex justify-between items-center px-6 py-1">
                 <div class="flex gap-3 items-center">
                   <i
                     class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
@@ -123,26 +131,25 @@
             </div>
           </div>
           <p class="p-6 font-semibold bg-gray-200">
-            <a href="#" class="anchor bg-gray-200"
-              >View details <i class="fa-solid fa-arrow-down mx-3"></i
-            ></a>
+            <a href="#" id="details" class="anchor bg-gray-200"
+              >View details
+            </a>
           </p>
         </div>
-        <div class="mb-8">
+        <div class="mb-6">
           <div class="shadow-sm shadow-slate-400">
             <div class="flex justify-between items-center p-4">
               <div class="flex gap-4 mx-3 items-center">
                 <h1
-                  class="font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
+                  class="text-center font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
                 >
                   2
                 </h1>
                 <h1 class="text-2xl font-bold">Aggregate Functions</h1>
-                <h1 class="text-lg bg-yellow-400 p-2 rounded-md">Free</h1>
               </div>
-              <div class="flex gap-1">
+              <div class="flex items-center gap-1">
                 <h1 class="text-lg p-2">0%</h1>
-                <input type="range" />
+                <progress value="0" max="10"></progress>
               </div>
             </div>
             <p class="p-6 font-semibold">
@@ -200,26 +207,23 @@
             </div>
           </div>
           <p class="p-6 font-semibold bg-gray-200">
-            <a href="#" class="anchor bg-gray-200"
-              >View details <i class="fa-solid fa-arrow-down mx-3"></i
-            ></a>
+            <a href="#" id="details" class="anchor bg-gray-200">View details</a>
           </p>
         </div>
-        <div class="mb-8">
+        <div class="mb-6">
           <div class="shadow-sm shadow-slate-400">
             <div class="flex justify-between items-center p-4">
               <div class="flex gap-4 mx-3 items-center">
                 <h1
-                  class="font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
+                  class="text-center font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
                 >
                   3
                 </h1>
                 <h1 class="text-2xl font-bold">Filtering rows</h1>
-                <h1 class="text-lg bg-yellow-400 p-2 rounded-md">Free</h1>
               </div>
-              <div class="flex gap-1">
+              <div class="flex items-center gap-1">
                 <h1 class="text-lg p-2">0%</h1>
-                <input type="range" />
+                <progress value="0" max="10"></progress>
               </div>
             </div>
             <p class="p-6 font-semibold">
@@ -277,26 +281,23 @@
             </div>
           </div>
           <p class="p-6 font-semibold bg-gray-200">
-            <a href="#" class="anchor bg-gray-200"
-              >View details <i class="fa-solid fa-arrow-down mx-3"></i
-            ></a>
+            <a href="#" id="details" class="anchor bg-gray-200">View details</a>
           </p>
         </div>
-        <div class="mb-8">
+        <div class="mb-6">
           <div class="shadow-sm shadow-slate-400">
             <div class="flex justify-between items-center p-4">
               <div class="flex gap-4 mx-3 items-center">
                 <h1
-                  class="font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
+                  class="text-center font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
                 >
                   4
                 </h1>
                 <h1 class="text-2xl font-bold">Sorting and grouping</h1>
-                <h1 class="text-lg bg-yellow-400 p-2 rounded-md">Free</h1>
               </div>
-              <div class="flex gap-1">
+              <div class="flex items-center gap-1">
                 <h1 class="text-lg p-2">0%</h1>
-                <input type="range" />
+                <progress value="0" max="10"></progress>
               </div>
             </div>
             <p class="p-6 font-semibold">
@@ -352,9 +353,7 @@
             </div>
           </div>
           <p class="p-6 font-semibold bg-gray-200">
-            <a href="#" class="anchor bg-gray-200"
-              >View details <i class="fa-solid fa-arrow-down mx-3"></i
-            ></a>
+            <a href="#" id="details" class="anchor bg-gray-200">View details</a>
           </p>
         </div>
       </div>
@@ -377,20 +376,20 @@
         class="flex justify-evenly md:justify-between mx-6 my-1 items-center"
       >
         <h1 class="text-2xl">datacamp</h1>
-        <div class="flex items-center border border-black border-2 rounded-md">
+        <div class="flex items-center border-black border-2 rounded-md">
           <span
-            class="border-black border-r-2 p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+            class="border-black border-r-2 p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
           >
             <i class="fa-solid fa-arrow-left"></i>
           </span>
           <div
-            class="flex modal gap-4 items-center p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+            class="flex modal gap-4 items-center p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
           >
             <span class=""><i class="fa-solid fa-bars"></i></span>
             <h2 class="capitalize">course outline</h2>
           </div>
           <span
-            class="border-black border-l-2 p-2 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
+            class="border-black border-l-2 p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
           >
             <i class="fa-solid fa-arrow-right"></i>
           </span>
@@ -406,7 +405,7 @@
       <section class="my-[2.5rem] mx-auto w-[700px] h-[480px]">
         <div class="flex justify-between">
           <h1 class="text-2xl rounded-md">Welcome to the course!</h1>
-          <p class="bg-yellow-400 p-1 rounded-md">500px</p>
+          <p class="bg-yellow-400 p-1 text-sm rounded-md">500px</p>
         </div>
         <div>
           <video
@@ -443,21 +442,31 @@
       const section = document.querySelector("section");
       const main = document.querySelector(".main");
       const close = document.querySelector(".fa-xmark");
-      const anchor = document.querySelector(".anchor");
-      const content = document.querySelector(".content");
-      console.log(content);
-
+      const anchor = document.getElementsByClassName("anchor");
+      const content = document.getElementsByClassName("content");
+      console.log(anchor);
+      console.log(anchor);
       modal.addEventListener("click", () => {
         section.classList.add("active");
         main.classList.add("active");
         close.classList.remove("active");
       });
+      for (var i = 0; i < anchor.length; i++) {
+        anchor[i].addEventListener("click", () => {
+          if (anchor.innerHTML === "Hide details ") {
+            anchor.innerHTML = "view details";
+          } else {
+            anchor.innerHTML = "Hide details ";
+          }
+          for (j = 0; j < content.length; j++) {
+            content[j].classList.toggle("active");
+          }
+        });
+      }
+
       close.addEventListener("click", () => {
         section.classList.remove("active");
         main.classList.remove("active");
-      });
-      anchor.addEventListener("click", () => {
-        content.classList.toggle("active");
       });
     </script>
   </body>
