@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      .accordion__content {
+        max-height: 0em;
+        /* transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87); */
+      }
+
+      input[name="panel"]:checked~.accordion__content {
+        max-height: 100%;
+      }
+
       section.active {
         display: block;
       }
+
       .main.active {
         background-color: rgb(53, 53, 53);
         height: 100vh;
         /* opacity: 0.2; */
       }
+
       div.scroll {
         /* margin: 4px, 4px; */
         /* padding: 4px; */
@@ -31,13 +39,16 @@
         overflow-y: auto;
         text-align: justify;
       }
+
       .content.active {
         display: block;
       }
+
       progress::-webkit-progress-bar {
         border-radius: 5px;
         background-color: #ccc;
       }
+
       progress::-moz-progress-bar {
         border-radius: 5px;
         background-color: rgb(21, 223, 31);
@@ -45,30 +56,27 @@
     </style>
     <title>Data camp</title>
   </head>
+
   <body class="bg-[#f7f3eb] h-[100vh]">
     <section
-      class="hidden bg-white rounded-md mx-auto p-6 z-[5] absolute top-[1rem] left-[4.5rem] right-[4.5rem] md:left-[8rem] md:right-[8rem] bottom-[1rem]"
-    >
+      class="hidden bg-white rounded-md mx-auto p-6 z-[5] absolute top-[1rem] left-[4.5rem] right-[4.5rem] md:left-[8rem] md:right-[8rem] bottom-[1rem]">
       <div class="flex justify-between mx-5">
         <h1 class="text-lg font-semibold">Introduction to SQL</h1>
-        <span
-          ><i
-            class="fa-solid fa-xmark text-lg hover:bg-[#ccc] transition-all duration-400 cursor-pointe px-2 rounded-md py-1"
-          ></i
-        ></span>
+        <span><i
+            class="fa-solid fa-xmark text-lg hover:bg-[#ccc] transition-all duration-400 cursor-pointe px-2 rounded-md py-1"></i></span>
       </div>
       <div class="scroll my-5 shadow-sm shadow-slate-300">
         <div class="mb-6">
           <div class="shadow-sm shadow-slate-400">
             <div class="flex justify-between items-center p-4">
               <div class="flex gap-4 mx-3 items-center">
-                <h1
-                  class="text-center font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
-                >
-                  1
-                </h1>
+                <div class="text-white bg-gray-600  rounded-[50%] p-2">
+                  <h1>
+                    1
+                  </h1>
+                </div>
                 <h1 class="text-2xl font-bold">Selecting Columns</h1>
-                <h1 class="text-lg bg-yellow-400 p-2 rounded-md">Free</h1>
+                <h1 class="text-lg bg-yellow-400 p-1 rounded-md">Free</h1>
               </div>
               <div class="flex items-center gap-1">
                 <h1 class="text-lg p-2">0%</h1>
@@ -82,144 +90,37 @@
               using simple SQL commands to select and summarize columns from
               database tables.
             </p>
-            <div class="content hidden">
-              <div class="flex justify-between items-center px-6 py-1">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
+
+            <div class="w-full">
+              <input type="checkbox" name="panel" id="panel-1" class="hidden" />
+              <div class="accordion__content overflow-hidden bg-grey-lighter">
+                <div class="flex justify-between p-6 items-center">
+                  <div class="flex items-center gap-3">
+                    <span><i class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"></i></span>
+                    <h1 class="text-lg p-2">Welcom To The Course</h1>
+                  </div>
+                  <h1 class="text-lg">50 XP</h1>
                 </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center px-6 py-1">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center px-6 py-1">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center px-6 py-1">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center px-6 py-1">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
               </div>
             </div>
+            <label for="panel-1"
+              class="relative block p-4 shadow border-b border-grey details transition-all duration-500">
+              <p>View
+                details <i class="fa-solid fa-arrow-down"></i></p>
+            </label>
           </div>
-          <p class="p-6 font-semibold bg-gray-200">
-            <a href="#" id="details" class="anchor bg-gray-200"
-              >View details
-            </a>
-          </p>
         </div>
         <div class="mb-6">
           <div class="shadow-sm shadow-slate-400">
             <div class="flex justify-between items-center p-4">
               <div class="flex gap-4 mx-3 items-center">
-                <h1
-                  class="text-center font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
-                >
-                  2
-                </h1>
-                <h1 class="text-2xl font-bold">Aggregate Functions</h1>
-              </div>
-              <div class="flex items-center gap-1">
-                <h1 class="text-lg p-2">0%</h1>
-                <progress value="0" max="10"></progress>
-              </div>
-            </div>
-            <p class="p-6 font-semibold">
-              This chapter teaches you how to use aggregate functions to
-              summarize data and gain useful insights. You'll also learn about
-              arithmetic in SQL and how to use aliases to make your results more
-              readable.
-            </p>
-            <div class="content hidden">
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
+                <div class="text-white bg-gray-600  rounded-[50%] p-2">
+                  <h1>
+                    2
+                  </h1>
                 </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-            </div>
-          </div>
-          <p class="p-6 font-semibold bg-gray-200">
-            <a href="#" id="details" class="anchor bg-gray-200">View details</a>
-          </p>
-        </div>
-        <div class="mb-6">
-          <div class="shadow-sm shadow-slate-400">
-            <div class="flex justify-between items-center p-4">
-              <div class="flex gap-4 mx-3 items-center">
-                <h1
-                  class="text-center font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
-                >
-                  3
-                </h1>
                 <h1 class="text-2xl font-bold">Filtering rows</h1>
+
               </div>
               <div class="flex items-center gap-1">
                 <h1 class="text-lg p-2">0%</h1>
@@ -227,73 +128,40 @@
               </div>
             </div>
             <p class="p-6 font-semibold">
-              This chapter builds on the first by teaching you how to filter
-              tables for rows satisfying some criteria of interest. You'll learn
-              how to use basic comparison operators, combine multiple criteria,
-              match patterns in text, and much more.
+              This chapter builds on the first by teaching you how to filter tables for rows satisfying some criteria of
+              interest. You'll learn how to use basic comparison operators, combine multiple criteria, match patterns in
+              text, and much more.
             </p>
-            <div class="content hidden">
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
+
+            <div class="w-full">
+              <input type="checkbox" name="panel" id="panel-2" class="hidden" />
+              <div class="accordion__content overflow-hidden bg-grey-lighter">
+                <div class="flex justify-between p-6 items-center">
+                  <div class="flex items-center gap-3">
+                    <span><i class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"></i></span>
+                    <h1 class="text-lg p-2">Welcom To The Course</h1>
+                  </div>
+                  <h1 class="text-lg">50 XP</h1>
                 </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
               </div>
             </div>
+            <label for="panel-2" class="relative block p-4 shadow border-b border-grey details1">
+              <p>View
+                details <i class="fa-solid fa-arrow-down"></i></p>
+            </label>
           </div>
-          <p class="p-6 font-semibold bg-gray-200">
-            <a href="#" id="details" class="anchor bg-gray-200">View details</a>
-          </p>
         </div>
         <div class="mb-6">
           <div class="shadow-sm shadow-slate-400">
             <div class="flex justify-between items-center p-4">
               <div class="flex gap-4 mx-3 items-center">
-                <h1
-                  class="text-center font-semibold text-white bg-gray-600 p-2 rounded-[50%]"
-                >
-                  4
-                </h1>
-                <h1 class="text-2xl font-bold">Sorting and grouping</h1>
+                <div class="text-white bg-gray-600  rounded-[50%] p-2">
+                  <h1>
+                    3
+                  </h1>
+                </div>
+                <h1 class="text-2xl font-bold">Aggregate Functions</h1>
+
               </div>
               <div class="flex items-center gap-1">
                 <h1 class="text-lg p-2">0%</h1>
@@ -301,105 +169,99 @@
               </div>
             </div>
             <p class="p-6 font-semibold">
-              This chapter provides a brief introduction to sorting and grouping
-              your results.
+              This chapter teaches you how to use aggregate functions to summarize data and gain useful insights. You'll
+              also learn about arithmetic in SQL and how to use aliases to make your results more readable.
             </p>
-            <div class="content hidden">
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
+
+            <div class="w-full">
+              <input type="checkbox" name="panel" id="panel-3" class="hidden" />
+              <div class="accordion__content overflow-hidden bg-grey-lighter">
+                <div class="flex justify-between p-6 items-center">
+                  <div class="flex items-center gap-3">
+                    <span><i class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"></i></span>
+                    <h1 class="text-lg p-2">Welcom To The Course</h1>
+                  </div>
+                  <h1 class="text-lg">50 XP</h1>
                 </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
-              </div>
-              <div class="flex justify-between items-center p-6">
-                <div class="flex gap-3 items-center">
-                  <i
-                    class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"
-                  ></i>
-                  <h1 class="text-lg p-2">Welcom To The Course</h1>
-                </div>
-                <h1 class="text-lg">50 XP</h1>
               </div>
             </div>
+            <label for="panel-3" class="relative block p-4 shadow border-b border-grey details2">
+              <p>View
+                details <i class="fa-solid fa-arrow-down"></i></p>
+            </label>
           </div>
-          <p class="p-6 font-semibold bg-gray-200">
-            <a href="#" id="details" class="anchor bg-gray-200">View details</a>
-          </p>
         </div>
+        <div class="mb-6">
+          <div class="shadow-sm shadow-slate-400">
+            <div class="flex justify-between items-center p-4">
+              <div class="flex gap-4 mx-3 items-center">
+                <div class="text-white bg-gray-600  rounded-[50%] p-2">
+                  <h1>
+                    4
+                  </h1>
+                </div>
+                <h1 class="text-2xl font-bold">Sorting and grouping</h1>
+
+              </div>
+              <div class="flex items-center gap-1">
+                <h1 class="text-lg p-2">0%</h1>
+                <progress value="0" max="10"></progress>
+              </div>
+            </div>
+            <p class="p-6 font-semibold">
+              This chapter provides a brief introduction to sorting and grouping your results.
+            </p>
+
+            <div class="w-full">
+              <input type="checkbox" name="panel" id="panel-4" class="hidden" />
+              <div class="accordion__content overflow-hidden bg-grey-lighter">
+                <div class="flex justify-between p-6 items-center">
+                  <div class="flex items-center gap-3">
+                    <span><i class="fa-solid text-white rounded-[50%] fa-play p-2 bg-gray-600"></i></span>
+                    <h1 class="text-lg p-2">Welcom To The Course</h1>
+                  </div>
+                  <h1 class="text-lg">50 XP</h1>
+                </div>
+              </div>
+            </div>
+            <label for="panel-4" class="relative block p-4 shadow border-b border-grey details3">
+              <p>View
+                details <i class="fa-solid fa-arrow-down"></i></p>
+            </label>
+          </div>
+        </div>
+
       </div>
       <div class="flex justify-around">
-        <button
-          class="border-slate-500 border-2 px-5 py-1 rounded-md hover:bg-gray-300 transition-all duration-400"
-        >
+        <button class="border-slate-500 border-2 px-5 py-1 rounded-md hover:bg-gray-300 transition-all duration-400">
           <i class="fa-solid fa-arrow-left mx-2"></i>
           Back To Dashboard
         </button>
-        <button
-          class="border-slate-500 border-2 px-5 py-1 rounded-md hover:bg-gray-300 transition-all duration-400"
-        >
+        <button class="border-slate-500 border-2 px-5 py-1 rounded-md hover:bg-gray-300 transition-all duration-400">
           <i class="fa-solid fa-rotate-left mx-2"></i> Reset Course Progress
         </button>
       </div>
     </section>
     <div class="main">
-      <nav
-        class="flex justify-evenly md:justify-between mx-6 my-1 items-center"
-      >
+      <nav class="flex justify-evenly md:justify-between mx-6 my-1 items-center">
         <h1 class="text-2xl">datacamp</h1>
         <div class="flex items-center border-black border-2 rounded-md">
-          <span
-            class="border-black border-r-2 p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
-          >
+          <span class="border-black border-r-2 p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer">
             <i class="fa-solid fa-arrow-left"></i>
           </span>
           <div
-            class="flex modal gap-4 items-center p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
-          >
+            class="flex modal gap-4 items-center p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer">
             <span class=""><i class="fa-solid fa-bars"></i></span>
             <h2 class="capitalize">course outline</h2>
           </div>
-          <span
-            class="border-black border-l-2 p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer"
-          >
+          <span class="border-black border-l-2 p-1 px-4 hover:bg-gray-300 transition-all duration-400 cursor-pointer">
             <i class="fa-solid fa-arrow-right"></i>
           </span>
         </div>
         <div class="hidden md:flex gap-3">
           <span class="text-md"><i class="fa-solid fa-mobile-screen"></i></span>
           <span class="text-md"><i class="fa-solid fa-note-sticky"></i></span>
-          <span class="text-md"
-            ><i class="fa-solid fa-circle-exclamation"></i
-          ></span>
+          <span class="text-md"><i class="fa-solid fa-circle-exclamation"></i></span>
         </div>
       </nav>
       <section class="my-[2.5rem] mx-auto w-[700px] h-[480px]">
@@ -408,29 +270,19 @@
           <p class="bg-yellow-400 p-1 text-sm rounded-md">500px</p>
         </div>
         <div>
-          <video
-            controls
-            preload="auto"
-            class="rounded-md my-6 mx-auto w-[800px] h-[400px]"
-            poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlNULV997dz9NTUieVFeUEuLANqpwIU4Evtw&usqp=CAU"
-          >
-            <source
-              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-              type="video/webm"
-            />
+          <video controls preload="auto" class="rounded-md my-6 mx-auto w-[800px] h-[400px]"
+            poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlNULV997dz9NTUieVFeUEuLANqpwIU4Evtw&usqp=CAU">
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
 
             Sorry, your browser doesn't support embedded videos.
           </video>
         </div>
         <div class="flex justify-between my-4">
-          <button
-            class="border-black border-2 p-2 rounded-md hover:bg-gray-300 transition-all duration-400"
-          >
+          <button class="border-black border-2 p-2 rounded-md hover:bg-gray-300 transition-all duration-400">
             Show Transcript
           </button>
           <span
-            class="bg-green-500 border-2 p-2 rounded-md hover:bg-green-400 transition-all duration-400 cursor-pointer"
-          >
+            class="bg-green-500 border-2 p-2 rounded-md hover:bg-green-400 transition-all duration-400 cursor-pointer">
             Got it
           </span>
         </div>
@@ -444,25 +296,53 @@
       const close = document.querySelector(".fa-xmark");
       const anchor = document.getElementsByClassName("anchor");
       const content = document.getElementsByClassName("content");
-      console.log(anchor);
-      console.log(anchor);
+      const details = document.querySelector(".details");
+      const details1 = document.querySelector(".details1");
+      const details2 = document.querySelector(".details2");
+      const details3 = document.querySelector(".details3");
+      const fa = document.querySelector(".fa-down");
+
       modal.addEventListener("click", () => {
         section.classList.add("active");
         main.classList.add("active");
         close.classList.remove("active");
       });
-      for (var i = 0; i < anchor.length; i++) {
-        anchor[i].addEventListener("click", () => {
-          if (anchor.innerHTML === "Hide details ") {
-            anchor.innerHTML = "view details";
-          } else {
-            anchor.innerHTML = "Hide details ";
-          }
-          for (j = 0; j < content.length; j++) {
-            content[j].classList.toggle("active");
-          }
-        });
-      }
+      // for(var i =0;i< details.length;i++){
+      details.addEventListener("click", () => {
+        console.log(details.ineerHTML)
+        if (details.innerHTML == `Hide details <i class="fa-solid fa-arrow-up"></i> `) {
+          details.innerHTML = `View details <i class="fa-solid fa-arrow-down"></i> `;
+        } else {
+          details.innerHTML = `Hide details <i class="fa-solid fa-arrow-up"></i> `;
+        }
+
+      });
+      details1.addEventListener("click", () => {
+        if (details1.innerHTML == `Hide details <i class="fa-solid fa-arrow-up"></i> `) {
+          details1.innerHTML = `View details <i class="fa-solid fa-arrow-down"></i> `;
+        } else {
+          details1.innerHTML = `Hide details <i class="fa-solid fa-arrow-up"></i> `;
+        }
+
+      });
+      details2.addEventListener("click", () => {
+        if (details2.innerHTML == `Hide details <i class="fa-solid fa-arrow-up"></i> `) {
+          details2.innerHTML = `View details <i class="fa-solid fa-arrow-down"></i> `;
+        } else {
+          details2.innerHTML = `Hide details <i class="fa-solid fa-arrow-up"></i> `;
+        }
+
+      });
+      details3.addEventListener("click", () => {
+        if (details3.innerHTML == `Hide details <i class="fa-solid fa-arrow-up"></i> `) {
+          details3.innerHTML = `View details <i class="fa-solid fa-arrow-down"></i> `;
+        } else {
+          details3.innerHTML = `Hide details <i class="fa-solid fa-arrow-up"></i> `;
+        }
+
+      });
+      // }
+
 
       close.addEventListener("click", () => {
         section.classList.remove("active");
@@ -470,4 +350,5 @@
       });
     </script>
   </body>
+
 </html>
